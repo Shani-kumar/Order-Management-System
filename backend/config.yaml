@@ -1,0 +1,7 @@
+
+db:
+  host: "host.docker.internal"
+  port: 5432
+  user: "postgres"
+  password: "12345"
+  name: "oms_db"

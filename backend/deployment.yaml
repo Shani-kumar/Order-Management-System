@@ -1,0 +1,22 @@
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: oms-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: oms-backend
+  template:
+    metadata:
+      labels:
+        app: oms-backend
+    spec:
+      containers:
+        - name: oms-container
+          image: oms-backend:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 5000
